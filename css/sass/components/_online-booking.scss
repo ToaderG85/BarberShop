@@ -1,0 +1,105 @@
+.online-booking-section {  
+    display: flex;
+    background-color: #191C26;
+    &__right-side {
+        flex: 1 0 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 100px;
+        background-image: url(../images/contacts/contacts-D-1x.png);
+        .contact-list{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .adress-line {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: #9DA4BD;
+            text-decoration: none;
+            font-style: normal;            
+        }
+        .phone {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: #9DA4BD;
+            text-decoration: none;
+            font-style: normal;
+        }
+        .e-mail {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            text-decoration-line: underline;
+            color: #9DA4BD;font-style: normal;
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding-left: 30px;
+            height: 11px;
+            svg {
+                background: rgba(157, 164, 189, 0.4);
+                transform: rotate(90deg);
+            }
+        }
+        p {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: #9DA4BD;
+            height: 18px;
+        }
+    }
+    &__left-side {
+        flex: 1 0 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+        padding: 100px 30px 100px 100px;
+    }    
+}
+
+.online-booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    input {
+        flex: 1 0 40%;
+    }
+    textarea {
+        flex: 1 0 100%;
+        margin: 34px 0px;
+        resize: none;
+    }
+    input,
+    textarea {
+        background: transparent;
+        border: none;
+        color: rgba(157, 164, 189, 0.4);
+        border-bottom: 2px solid rgba(157, 164, 189, 0.4);
+        outline: none;
+    }
+    input:focus,
+    textarea:focus {
+        color:#FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+        cursor: pointer;
+    }
+    input:focus::placeholder,
+    textarea:focus::placeholder {
+        color: #FFFFFF;
+    }    
+}
+
+

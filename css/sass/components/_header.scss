@@ -1,0 +1,128 @@
+.header-section-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-social {
+    width: 155px;
+    height: 680px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        padding-bottom: 50px;
+            }
+    &__item {
+        text-decoration: none;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.2em;
+        color: #303030;
+        transform: rotate(-90deg);
+    }
+    .main-logo {
+        margin-top: 32px;
+    }
+    svg {
+        background-color: #303030;
+    }
+    a {
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.2em;
+        color: #303030;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            color: #FF6C00;
+        }
+    }
+}
+
+.hero {
+    height: 680px;
+    width: 1015px;
+    background-color: grey;
+    padding: 52px 20px 0px 100px;
+    background-image: url(../images/barber/barber-D-1x.png);
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .main-navigation {
+            &__list {
+                display: flex;
+                gap: 30px;
+            }
+        }
+        .right-navigation {
+            &__list {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+            }
+        }
+    }
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-style: normal;
+    color: #FFFFFF;
+    &:hover,
+    &:focus {
+        color: #FF6C00;
+    }
+}
+
+.main-description {
+    display: flex;
+    flex-direction: column;
+    padding-top: 205px;
+    gap: 20px;
+    &__subtitle {
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: rgba(157, 164, 189, 0.6);
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+    }
+    &__title {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 49px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        color: #9DA4BD; 
+    }
+    svg {
+        background: rgba(157, 164, 189, 0.6);
+        transform: rotate(90deg); 
+    }
+}
