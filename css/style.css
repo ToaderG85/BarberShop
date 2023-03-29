@@ -11,8 +11,20 @@ html {
     line-height: 16px;
     letter-spacing: 0.1em;
 }
+
+*{margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+ }
+
 .unstyled-list {
     list-style: none;
+}
+.container {
+    margin: 0 auto;
+    width: 1170px;
 }
 
 .link {
@@ -20,14 +32,39 @@ html {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.1em;
-    color: #FFFFFF;
     text-decoration: none;
     font-style: normal;
 }
 .header-navigation,
-.page-section,
+.services,
 .hero-section{
     background-color: var(--background-section);
+}
+
+.page-header {
+    display: flex;
+    margin-left: 155px;
+}
+
+
+
+.header-container,
+.hero-section,
+.about,
+.services,
+.portfolio,
+.our-barbers,
+.activities,
+.online-booking,
+.page-footer {
+    margin: 0px auto;
+}
+.header-navigation {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    
+
 }
 
 .navigation-list li a{
@@ -35,8 +72,25 @@ html {
     text-decoration: none;
 }
 
+.navigation-list li a:hover{ 
+    color: #FF6C00;
+}
+
+.navigation-list,
+.right-navigation-list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navigation-list {
+    flex-grow: 1;
+}
+
 .online-booking-button {
     box-sizing: border-box;
+    width: 160px;
+    height: 40px;
     border: 1px solid #FF6C00;
     border-radius: 25px;
     font-weight: 600;
@@ -46,6 +100,7 @@ html {
     text-transform: uppercase;
     color: #FFFFFF;
     background: rgba(25, 28, 38, 0.2);
+    padding: 12px 20px;
  }
 
  .sub-title-section {
@@ -104,13 +159,88 @@ html {
     color: #9DA4BD;
 }
 
-/*PortfolioSection*/
+/*AboutSection*/
+
+.about {
+   height: 685px;
+}
+
+.about{
+    display: flex;
+    gap: 30px;
+    padding: 120px 100px 120px 0px;
+}
+
+.about .images-container {
+    display: flex;
+    gap: 30px;
+}
+
+.details-container {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button-container {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+/*ServicesSection*/
+
+.services {
+    padding: 120px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.services-lists {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/*PortflioSection*/
+
+.portfolio {
+    display: flex;
+    gap: 130px;
+    padding: 120px 100px;
+}
+
+.cards-left-side,
+.portfolio-description {
+    flex: 1 1 50%;
+}
+
+.card:nth-child(2n) {
+    position: relative;
+    top: 35px;
+}
+
+.cards-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
 .card {
     width: 170px;
     height: 133px;
     background: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 24px;
 }
+
+
+
 .card-title {
     font-weight: 700;
     font-size: 42px;
@@ -119,7 +249,22 @@ html {
     letter-spacing: 0.05em;
     color: #303030;
 }
+
+.card-title::after {
+    content: "+";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #FF6C00;
+    position: relative;
+    top: -25px;
+    left: 2px;
+}
+
 .card-description {
+    width: 122px;
+    height: 30px;
     font-weight: 600;
     font-size: 11px;
     line-height: 15px;
@@ -127,18 +272,37 @@ html {
     color: #303030;
 }
 
-.sup {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    text-align: center;
-    color: #FF6C00;
+/*OurBarbersSection*/
+
+.our-barbers {
+    display: flex;
+    flex-direction: column;
+    padding: 102px 0px;
+    gap: 20px;
+    height: 870px;
+    background: #F7F7F7
 }
 
-/*OurBarbersSection*/
+.our-barbers-list{
+    display: flex;
+    gap: 30px;
+}
+
 .our-barbers .image {
     width: 370px;
     height: 346px;
+}
+
+.our-barbers-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.barber-details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .our-barbers .title {
@@ -157,6 +321,33 @@ html {
     color: #FF6C00;
 }
 
+.social-media-icons ul{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.icon-list-item {
+    width: 44px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-list-item a {
+    color: #303030;
+}
+
+.icon-list-item svg {
+    fill: currentColor;
+}
+
+.icon-list-item a:hover{
+    color: #FF6C00;
+}
+
 .link-social {
     font-weight: 600;
     font-size: 11px;
@@ -165,3 +356,82 @@ html {
     color: #303030;
     text-decoration: none;
 }
+
+/*ActivitiesSection*/
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 0px;
+    gap:44px;
+}
+
+.haircut-action {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.online-booking {
+    display: flex;
+    background-color: #191C26;
+    padding: 100px;
+}
+
+.online-booking .left-side,
+.online-booking .right-side {
+    flex: 1 0 50%;
+}
+
+.online-booking .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.online-booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.online-booking-form input {
+    flex: 1 0 40%;
+}
+
+.online-booking-form textarea {
+    flex: 1 0 100%;
+    margin: 34px 0px;
+    resize: none;
+}
+
+.online-booking-form input,
+.online-booking-form textarea {
+    background: transparent;
+    border: none;
+    color: rgba(157, 164, 189, 0.4);
+    border-bottom: 2px solid rgba(157, 164, 189, 0.4);
+    outline: none;
+}
+
+.left-side h3 {
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-transform: none;
+}
+
+.online-booking-form input:focus,
+.online-booking-form textarea:focus {
+    color:#FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.online-booking-form input:focus::placeholder,
+.online-booking-form textarea:focus::placeholder {
+    color: #FFFFFF;
+}
+

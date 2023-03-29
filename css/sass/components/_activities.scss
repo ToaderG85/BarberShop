@@ -1,0 +1,18 @@
+.activities-section {
+    &__container{
+        display: flex;
+        flex-direction: column;
+        padding: 120px 0px;
+         gap:44px;
+    }
+    svg {
+        background: #303030;
+        transform: rotate(90deg);
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    } 
+}    
+      
