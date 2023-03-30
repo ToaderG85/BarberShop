@@ -74,16 +74,16 @@
                     <h2 class="services-section__title">Services and prices</h2>
                     <div class="services-section__lists">
                         <ul class="services-section__item-a unstyled-list">
-                            <li>Men’s haircut<span>from 300 uah.</span></li>
-                            <li>Beard trim<span></span>from 300 uah.</li>
-                            <li>Mustache trim<span></span>from 200 uah.</li>
-                            <li>Straight razor shave<span>from 200 uah.</span></li>
+                            <li class="service">Men’s haircut<span>from 300 uah.</span></li>
+                            <li class="service">Beard trim<span></span>from 300 uah.</li>
+                            <li class="service">Mustache trim<span></span>from 200 uah.</li>
+                            <li class="service">Straight razor shave<span>from 200 uah.</span></li>
                         </ul>
                         <ul class="services-section__item-b unstyled-list">
-                            <li>Trainee’s haircut<span>from 50 uah.</span></li>
-                            <li>Haircut under the nozzle<span>from 200 uah.</span></li>
-                            <li>Children’s haircut (0-12 y.o.)<span>from 300 uah.</span></li>
-                            <li>Camouflage of gray hair<span>from 200 uah.</span></li>
+                            <li class="service">Trainee’s haircut<span>from 50 uah.</span></li>
+                            <li class="service">Haircut under the nozzle<span>from 200 uah.</span></li>
+                            <li class="service">Children’s haircut (0-12 y.o.)<span>from 300 uah.</span></li>
+                            <li class="service">Camouflage of gray hair<span>from 200 uah.</span></li>
                         </ul>
                     </div>
                     <button class="online-booking-button">ONLINE-BOOKING</button>
@@ -234,38 +234,42 @@
             </section>
             <!--OnlineBookingSection-->
             <section class="online-booking-section">
-                
-                    <div class="online-booking-section__left-side">
-                        <h3 class="services-section__title">Online-Booking</h3>
-                        <form name="online-booking" class="online-booking-form">
-                            <input type="text" placeholder="NAME*" name="name">
-                            <input type="tel" placeholder="PHONE" name="phone">
-                            <textarea placeholder="MESSAGE" name=""></textarea>
-                            <button type="submit" class="send-button-form online-booking-button">Send</button>
-                        </form>
-                    </div>
-                    <div class="online-booking-section__right-side">
-                        <h2 class="services-section__title">Contact</h2>
-                        <address>
-                            <ul class="contact-list unstyled-list">
-                                <li><a class="adress-line" href="st. Vasilkovaya, 7A Kiev, 08132">st. Vasilkovaya, 7A Kiev, 08132</a></li>
-                                <li><a class="phone" href="tel:+380441111111">+38 044 111 11 11</a></li>
-                                <li><a class="e-mail" href="mailto:barbershop@email.com">barbershop@email.com</a></li>
-                            </ul>
-                        </address>
-                        <h3><svg width="1" height="60"><use href="images/icons-svg.svg#icon-Line"></use></svg>Working hours</h3>
-                        <p>Every day from 9:00 to 22:00</p>
-                    </div>
+                <div class="online-booking-section__container container">
+                <div class="online-booking-section__left-side">
+                    <h3 class="services-section__title">Online-Booking</h3>
+                    <form name="online-booking" class="online-booking-form">
+                        <input type="text" placeholder="NAME*" name="name">
+                        <input type="tel" placeholder="PHONE" name="phone">
+                        <textarea placeholder="MESSAGE" name=""></textarea>
+                        <button type="submit" class="send-button-form online-booking-button">Send</button>
+                    </form>
+                </div>
+                <div class="online-booking-section__right-side">
+                    <h2 class="services-section__title">Contact</h2>
+                    <address>
+                        <ul class="contact-list unstyled-list">
+                            <li><a class="adress-line" href="st. Vasilkovaya, 7A Kiev, 08132">st. Vasilkovaya, 7A Kiev, 08132</a></li>
+                            <li><a class="phone" href="tel:+380441111111">+38 044 111 11 11</a></li>
+                            <li><a class="e-mail" href="mailto:barbershop@email.com">barbershop@email.com</a></li>
+                        </ul>
+                    </address>
+                    <h3><svg width="1" height="60"><use href="images/icons-svg.svg#icon-Line"></use></svg>Working hours</h3>
+                    <p>Every day from 9:00 to 22:00</p>
+                </div>
+            </div>
                 
             </section>
         </main>
         <!--PageFooter-->
-        <footer class="page-footer">
-            <p>&copy;Copyright 2020</p>
-            <ul class="unstyled-list">
-                <li><a class="link-social" href="https://www.instagram.com">Instagram</a></li>
-                <li><a class="link-social" href="https://www.youtube.com">YouTube</a></li>
-            </ul>
+        <footer class="footer-section">
+            <div class="footer-section__container container">
+                <p>&copy;Copyright 2020</p>
+                <ul class="footer-section__list unstyled-list">
+                    <li class="footer-section__item"><svg width="1" height="60"><use href="images/icons-svg.svg#icon-Line"></use></svg></li>
+                    <li><a class="header-social__item" href="https://www.instagram.com">Instagram</a></li>
+                    <li><a class="header-social__item" href="https://www.youtube.com">YouTube</a></li>
+                </ul>
+            </div>
         </footer>    
     </body>
 </html>

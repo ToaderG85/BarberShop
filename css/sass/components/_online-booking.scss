@@ -1,13 +1,22 @@
 .online-booking-section {  
     display: flex;
     background-color: #191C26;
+    margin: 0 auto;
+    background-image: url(../images/contacts/contacts-D-1x.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 50%;
+    &__container{
+        display: flex;
+
+    }
     &__right-side {
         flex: 1 0 50%;
         display: flex;
         flex-direction: column;
         gap: 40px;
         padding: 100px;
-        background-image: url(../images/contacts/contacts-D-1x.png);
+        
         .contact-list{
             display: flex;
             flex-direction: column;
@@ -63,7 +72,7 @@
     }
     &__left-side {
         flex: 1 0 50%;
-        display: flex;
+        display: flex;        
         flex-direction: column;
         gap: 44px;
         padding: 100px 30px 100px 100px;

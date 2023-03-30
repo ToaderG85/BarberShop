@@ -1,0 +1,29 @@
+.footer-section {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    &__item{ 
+        display: flex;
+        justify-content: center;
+        padding-top: 5px;
+        padding-right: 40px;
+    }
+    svg {
+        background: #303030;
+        transform: rotate(90deg);
+    }
+    p {
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.2em;
+        color: #9DA4BD;
+    }
+}
