@@ -1,6 +1,7 @@
 .services-section {
     background: #111319;
     background-image: url(../images/services/services-D-1x.png);
+    background-size: cover;
     padding: 120px 0px;   
     &__subtitle {
         font-weight: 600;
@@ -30,6 +31,7 @@
     &__lists {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding-bottom: 44px;
         font-size: 18px;
         line-height: 30px;

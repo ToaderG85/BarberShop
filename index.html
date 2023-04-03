@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BarberShop</title> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +25,7 @@
                 </div>                
                 <div class="hero">
                     <div class="hero__navigation">
-                        <nav class="main-navigation">
+                        <nav class="main-navigation menu">
                             <ul class="main-navigation__list unstyled-list">
                                 <li class="main-navigation__item"><a class="nav-link" href="about.html">About</a></li>
                                 <li class="main-navigation__item"><a class="nav-link" href="services and prices.html">Services and prices</a></li>
@@ -32,12 +33,31 @@
                                 <li class="main-navigation__item"><a class="nav-link" href="contacts.html">Contacts</a></li>
                             </ul>
                         </nav>
-                        <div class="right-navigation">
+                        <div class="right-navigation menu">
                             <ul class="right-navigation__list unstyled-list">
                                 <li class="right-navigation__item"><a class="nav-link" href="tel:+123456789">+38 044 111 11 11</a></li>
                                 <li class="right-navigation__item"><button class="online-booking-button">ONLINE BOOKING</button></li>
                             </ul>
                         </div>
+                        <button
+                              class="menu-toggle js-open-menu"
+                              aria-expanded="false"
+                              aria-controls="mobile-menu"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </button>
                     </div>
                     <div class="main-description">
                         <h3 class="main-description__subtitle"><svg width="1" height="60"><use href="images/icons-svg.svg#icon-Line"></use></svg>A hair salon for men in Kyiv</h3>
@@ -49,12 +69,73 @@
             </div>
         </header>
         <main>
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="menu-toggle js-close-menu">
+                  <svg
+                    fill="currentColor"
+                    color="black"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <nav class="main-navigation">
+                    <ul class="main-navigation__list unstyled-list">
+                        <li class="main-navigation__item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="main-navigation__item"><a class="nav-link" href="services and prices.html">Services and prices</a></li>
+                        <li class="main-navigation__item"><a class="nav-link" href="barbers.html">Barbers</a></li>
+                        <li class="main-navigation__item"><a class="nav-link" href="contacts.html">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="right-navigation">
+                    <ul class="right-navigation__list unstyled-list">
+                        <li class="right-navigation__item"><a class="nav-link" href="tel:+123456789">+38 044 111 11 11</a></li>
+                        <li class="right-navigation__item"><button class="online-booking-button">ONLINE BOOKING</button></li>
+                    </ul>
+                </div>
+                <ul class="header-social__list unstyled-list">
+                    <li><svg width="1" height="60"><use href="images/icons-svg.svg#icon-Line"></use></svg></li>
+                    <li>
+                        <ul class="unstyled-list">
+                            <li class="header-social__item"><a href="" >YouTube</a></li>
+                            <li class="header-social__item"><a href="" >Instagram</a></li> 
+                        </ul>
+                    </li>                                                            
+                </ul>
+              </div>
             <!--AboutSection-->
             <section class="about-section">
                 <div class="about-section__container container">
                     <div class="about-section__images">
-                        <img width="270" height="445" src="images/HairCut1.png" alt="HairCut1">
-                        <img width="270" height="445" src="images/HairCut2.png" alt="HairCut2">
+                        <picture>
+                            <source
+                                media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                srcset="images/about/about1-T-1x.png 1x,images/employee/about/about1-T-2x.png 2x"/>
+                            <source
+                                media="screen and (min-width: 1200px)"
+                                srcset="images/about/about1-D-1x.png 1x,images/about/about1-D-2x.png 2x"/>  
+                            <img 
+                                src="images/about/about1-T-1x.png" 
+                                alt="clasic shave"/>                                
+                        </picture>
+                        <picture>
+                            <source
+                                media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                srcset="images/about/about2-T-1x.png 1x,images/employee/about/about2-T-2x.png 2x"/>
+                            <source
+                                media="screen and (min-width: 1200px)"
+                                srcset="images/about/about2-D-1x.png 1x,images/about/about2-D-2x.png 2x"/>  
+                            <img 
+                                src="images/about/about2-T-1x.png" 
+                                alt="clasic razor"/>                                
+                        </picture>
                     </div>
                     <div class="about-section-details">
                         <h3 class="about-section-details__subtitle"><svg width="1" height="60"><use href="images/icons-svg.svg#icon-Line"></use></svg>ABOUT</h3>
@@ -124,7 +205,20 @@
                     <h2 class="our-barbers-section__title about-section-details__title">Our barbers</h2>
                     <ul class="our-barbers-section__list unstyled-list">
                         <li class="our-barbers-section__item">
-                            <img class="image" src="images/emp1/barber1-D-1x.png" alt="John Smith">
+                            <picture>
+                                <source
+                                    media="screen and (max-width: 767px)"
+                                    srcset="images/emp1/barber1-M-1x.png 1x,images/emp1/barber1-M-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                    srcset="images/emp1/barber1-T-1x.png 1x,images/emp1/barber1-T-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 1200px)"
+                                    srcset="images/emp1/barber1-D-1x.png 1x,images/emp1/barber1-D-2x.png 2x"/>  
+                                <img 
+                                    src="images/emp1/barber1-M-1x.png" 
+                                    alt="John Smith"/>                                
+                            </picture>                            
                             <div class="barber-details">
                                 <h3 class="barber-details__title">John Smith</h3>
                                 <p class="barber-details__description">Extreme Barber</p>
@@ -155,7 +249,20 @@
                             </div>
                         </li>
                         <li class="our-barbers-section__item">
-                            <img class="image" src="images/emp2/barber2-D-1x.png" alt="Michele Doe">
+                            <picture>
+                                <source
+                                    media="screen and (max-width: 767px)"
+                                    srcset="images/emp2/barber2-M-1x.png 1x,images/emp2/barber2-M-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                    srcset="images/emp2/barber2-T-1x.png 1x,images/emp2/barber2-T-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 1200px)"
+                                    srcset="images/emp2/barber2-D-1x.png 1x,images/emp2/barber2-D-2x.png 2x"/>  
+                                <img 
+                                    src="images/emp2/barber2-M-1x.png" 
+                                    alt="Michele Doe"/>                                
+                            </picture>                            
                             <div class="barber-details">
                                 <h3 class="barber-details__title">Michele Doe</h3>
                                 <p class="barber-details__description">Extreme Barber</p>
@@ -186,7 +293,20 @@
                             </div>
                         </li>
                         <li class="our-barbers-section__item">
-                            <img class="image" src="images/emp3/barber3-D-1x.png" alt="Alan Black">
+                            <picture>
+                                <source
+                                    media="screen and (max-width: 767px)"
+                                    srcset="images/emp3/barber3-M-1x.png 1x,images/emp3/barber3-M-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                    srcset="images/emp3/barber3-T-1x.png 1x,images/emp3/barber3-T-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 1200px)"
+                                    srcset="images/emp3/barber3-D-1x.png 1x,images/emp3/barber3-D-2x.png 2x"/>  
+                                <img 
+                                    src="images/emp3/barber3-M-1x.png" 
+                                    alt="Alan Black"/>                                
+                            </picture>                           
                             <div class="barber-details">
                                 <h3 class="barber-details__title">Alan Black</h3>
                                 <p class="barber-details__description">Extreme Barber</p>
@@ -225,10 +345,70 @@
                     <h3 class="activities-section__subtitle about-section-details__subtitle"><svg width="1" height="60"><use href="images/icons-svg.svg#icon-Line"></use></svg>In Latin, "barba" means "beard"</h3>
                     <h2 hidden class="activities-section__title about-section-details__title">Haircut Action</h2>
                     <ul class="activities-section__list unstyled-list">
-                        <li class="activities-section__item"><img src="images/clipper/clipper-D-1x.png" alt="haircutAction"></li>
-                        <li class="activities-section__item"><img src="images/shave/shave-D-1x.png" alt="haircutAction"></li>
-                        <li class="activities-section__item"><img src="images/facecover/facecover-D-1x.png" alt="haircutAction"></li>
-                        <li class="activities-section__item"><img src="images/razor/razor-D-1x.png" alt="haircutAction"></li>
+                        <li class="activities-section__item">
+                            <picture>
+                                <source
+                                    media="screen and (max-width: 767px)"
+                                    srcset="images/clipper/clipper-M-1x.png 1x,images/clipper/clipper-M-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                    srcset="images/clipper/clipper-T-1x.png 1x,images/clipper/clipper-T-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 1200px)"
+                                    srcset="images/clipper/clipper-D-1x.png 1x,images/clipper/clipper-D-2x.png 2x"/>  
+                                <img 
+                                    src="images/clipper/clipper-M-1x.png" 
+                                    alt="haircutAction"/>                                
+                            </picture>
+                        </li>
+                        <li class="activities-section__item">
+                            <picture>
+                                <source
+                                    media="screen and (max-width: 767px)"
+                                    srcset="images/shave/shave-M-1x.png 1x,images/shave/shave-M-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                    srcset="images/shave/shave-T-1x.png 1x,images/shave/shave-T-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 1200px)"
+                                    srcset="images/shave/shave-D-1x.png 1x,images/shave/shave-D-2x.png 2x"/>  
+                                <img 
+                                    src="images/shave/shave-M-1x.png" 
+                                    alt="haircutAction"/>                                
+                            </picture>
+                        </li>
+                        <li class="activities-section__item">
+                            <picture>
+                                <source
+                                    media="screen and (max-width: 767px)"
+                                    srcset="images/facecover/facecover-M-1x.png 1x,images/facecover/facecover-M-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                    srcset="images/facecover/facecover-T-1x.png 1x,images/facecover/facecover-T-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 1200px)"
+                                    srcset="images/facecover/facecover-D-1x.png 1x,images/facecover/facecover-D-2x.png 2x"/>  
+                                <img 
+                                    src="images/facecover/facecover-M-1x.png" 
+                                    alt="haircutAction"/>                                
+                            </picture>
+                        </li>
+                        <li class="activities-section__item">
+                            <picture>
+                                <source
+                                    media="screen and (max-width: 767px)"
+                                    srcset="images/razor/razor-M-1x.png 1x,images/razor/razor-M-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 768px) and (max-width: 1199px)"
+                                    srcset="images/razor/razor-T-1x.png 1x,images/razor/razor-T-2x.png 2x"/>
+                                <source
+                                    media="screen and (min-width: 1200px)"
+                                    srcset="images/razor/razor-D-1x.png 1x,images/razor/razor-D-2x.png 2x"/>  
+                                <img 
+                                    src="images/razor/razor-M-1x.png" 
+                                    alt="haircutAction"/>                                
+                            </picture>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -276,6 +456,13 @@
                     <li><a class="header-social__item" href="https://www.youtube.com">YouTube</a></li>
                 </ul>
             </div>
-        </footer>    
+        </footer>
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous">
+        </script>  
+        <script src="js/mobile-menu.js"></script>
     </body>
 </html>

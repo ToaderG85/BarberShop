@@ -1,8 +1,7 @@
 .portfolio-section {
     &__container{
         display: flex;
-        gap: 130px;
-        padding: 120px 100px;
+        gap: 130px;        
         margin: auto;
     }
 }
@@ -67,5 +66,24 @@
     svg {
         background: #303030;
         transform: rotate(90deg);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .portfolio-section__container{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio-section__container {
+        padding: 100px 40px;
+    }
+}
+   
+
+@media screen and (min-width: 768px) {
+    .portfolio-section__container {
+        padding: 120px 100px;        
     }
 }
